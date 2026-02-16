@@ -16,13 +16,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Valina Convent
+  Sanne 't Hooft (vervangen door jouw naam)
 
   #### Je startniveau:
-  blauw met zijwielen
+  hier je startniveau (kies uit zwart, rood óf blauw)
 
   #### Je focus:
-  oef, nog geen keuze. Doe ik voor de 2de les na het reces (kies uit responsive óf surface plane)
+  hier je focus (kies uit responsive óf surface plane)
  
 </details>
 
