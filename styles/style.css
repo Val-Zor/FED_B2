@@ -7,7 +7,10 @@
 
 
 
-
+img { 
+	max-width: 100%;
+/* wordt nooit groter dan de parent. Mickey zijn foto was giga */
+}
 
 
 /*********************/
@@ -20,7 +23,54 @@
 }
 
 
+/* dit gaat over Wat wij doen en daarin de carousel */
+/* .carousel {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  anchor-name: --carousel;
 
+  > .carousel__slide {
+    scroll-snap-align: center;
+  }
+} */
+/* geen carousel Class maar met Ul en li */
+
+
+#wat-wij-doen ul {
+	display: flex;
+	overflow-x: auto;
+	overscroll-behavior-x: contain;
+	scroll-snap-type: x mandatory;
+	anchor-name: --carousel;
+	scroll-behavior: smooth;
+
+  > li {
+    width: 80%;
+	flex-shrink: 0;
+	scroll-snap-align: center;
+  }
+}
+
+
+#wat-wij-doen ul {
+  &::scroll-button(*) {
+    position: fixed;
+    position-anchor: --carousel;
+    position-visibility: always;
+    font-family: "Material Symbols Outlined";
+  }
+
+  &::scroll-button(right) {
+    position-area: inline-end center;
+    content: 'arrow_forward' / 'Next';
+  }
+
+  &::scroll-button(left) {
+    position-area: inline-start center;
+    content: 'arrow_back' / 'Previous';
+  }
+}
 
 
 /****************/

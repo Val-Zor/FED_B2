@@ -2,11 +2,14 @@
 <html lang="nl">
 	
 <head>
+	<!-- ziet gebruiker niet en goed voor SEO. Wel de titel en het icoontje in het tabblad-->
 	<meta charset="UTF-8">
 	<meta name="author" content="jouw naam">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- dit maakt dat je het mobiel ook goed ziet -->
 	
-	<title>Howdy FED2526</title>
+	<title>TuinMuis/homepage</title>
+	<!-- welke site en welke pagina wil ik weten. Nu enkel de site TuinMuis. Door /homepage zie je waar in de site-->
 
 	<link href="styles/style.css" rel="stylesheet">
 
@@ -18,11 +21,13 @@
 	<header>
 		<nav>
       		<ul>
+				<!-- nog een logo iets dat als Home knop werkt -->
        			<li><a href="#over-ons">Over ons</a></li>
-        		<li><a href="#diensten">Diensten</a></li>
-       			<li><a href="contact.html">Contact</a></li>
+        		<li><a href="#wat-wij-doen">Wat wij doen</a></li>
+       			<li><a href="contact/index.html">Contact</a></li>
       		</ul>
    		 </nav>
+		 <!-- naast elkaar en de 1ste twee springen naar de locatie op de website. Contact is een nieuwe pagina -->
 	</header>
 
 	<main>
@@ -34,29 +39,97 @@
 
 		<section id="over-ons">
       		<h2>Over ons</h2>
-      		<ul>
+			
+			<!-- ik wil met een button (leer meer) op de li dat het kaartje omdraait en je meer te lezen krijgt  -->
+      		<!-- en ik wil iets van een safe achtig icoontje er naast te doen -->
+			<ul>
         		<li>
-          			<h3>Valina</h3>
-              		<img src="....." alt="Foto van Valina">
-            		<p>Dienaar</p>
+          			<!-- <h3>Valina</h3>
+              		<img src="Valina.jpeg" alt="Valina heeft een BO">
+            		<p>Dienaar</p> -->
+					<details>
+  						<summary>
+							<!-- staat de samenvatting-->
+							<h3>Valina</h3>
+              				<img src="images/Valina.jpg" alt="Valina heeft een BO">
+            				<p>Dienaar</p>
+  						</summary>
+						<p>Meer onzin info</p>
+					<!-- hier staat alles zoals de P hierbovenb-->
+					 <!-- tab en spatie voor het ontsluiten van de informatie -->
+					</details> 
+					
         		</li>
+				
 				<li>
-          			<h3>Mickey</h3>
-              		<img src="....." alt="Foto van Mickey">
-            		<p>Hyperdepieper</p>
-        		</li>
+          			<details>
+  						<summary>
+							<h3>Mickey</h3>
+              				<img src="images/Mickey.jpeg" alt="Mickey vindt er wat van">
+            				<p>Hyperdepieper</p>
+        				</summary>
+						<p>Meer onzin info</p>
+					</details>
+				</li>
+				
 				<li>
           			<h3>Meis</h3>
-              		<img src="....." alt="Foto van Meis">
+              		<img src="images/Meis.jpeg" alt="Meis op de ladder">
             		<p>Andere planeet</p>
         		</li>
 			</ul>
 
-
-	<h1>Howdy FED2526</h1>
+		<section id="wat-wij-doen">
+  			<h2>Wat wij doen</h2>
+			<!-- elk met een getal en dat die over het blokje heengaat -->
+  			<ul>
+    			<li>
+      				<h3>Muis levend</h3>
+      				<p>Veel muizen onzin tekst. Veel muizen onzin tekst.Veel muizen onzin tekst. Veel muizen onzin tekst. Veel muizen onzin tekst.Veel muizen onzin tekst. </p>
+    			</li>
+    			<li>
+      				<h3>Muis dood</h3>
+      				<p>Veel muizen onzin tekst. Veel muizen onzin tekst.Veel muizen onzin tekst.</p>
+    			</li>
+    			<li>
+      				<h3>Muis on the run</h3>
+      				<p>Veel muizen onzin tekst. Veel muizen onzin tekst.Veel muizen onzin tekst.</p>
+    			</li>
+  			</ul>
+		</section>
+	
 
 	
 	</main>
+
+	<footer>
+ 		<h2>Wil je ons volgen? </h2>
+			<ul>
+      			<li><a href="contact.html">Contact</a></li>
+				<!-- ik wil naar de contactpagina dan gaan -->
+
+				<!-- hier wil ik 3 afbeeldingen naast elkaar  -->
+				<li>
+       				<a href="https://instagram.com" target="_blank">
+         			<img src="images/instagram-icon.png" alt="Volg ons op Instagram">
+        			</a>
+      			</li>
+      			<li>
+        			<a href="https://linkedin.com" target="_blank">
+          			<img src="images/LI-icon.png" alt="Volg ons op LinkedIn">
+        			</a>
+      			</li>
+     			 <li>
+        			<a href="mailto:info@mijnbedrijf.nl">
+          			<img src="images/email.png" alt="Stuur ons een e-mail">
+        			</a>
+      			</li>
+				
+    		</ul>
+
+    	<p><a href="algemene-voorwaarden.html">Algemene voorwaarden</a></p>
+	</footer>
+
 </body>
 	
 </html>
