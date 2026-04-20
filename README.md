@@ -16,13 +16,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Valina Convent
+  Sanne 't Hooft (vervangen door jouw naam)
 
   #### Je startniveau:
-  blauw met zijwieltjes
+  hier je startniveau (kies uit zwart, rood óf blauw)
 
   #### Je focus:
-  surface plane want leuk. Responsive want handig
+  hier je focus (kies uit responsive óf surface plane)
  
 </details>
 
@@ -36,7 +36,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  Denk aan: https://femmeandfierce.nl/ want er zitten wat grappige dingetjes in. 
+  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
