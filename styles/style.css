@@ -24,19 +24,17 @@ img {
 	--color-background:#eee;
 }
 
+main {
+	background-color: green;
+}
 
-/* dit gaat over Wat wij doen en daarin de carousel */
-/* .carousel {
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
-  anchor-name: --carousel;
-
-  > .carousel__slide {
-    scroll-snap-align: center;
-  }
-} */
-/* geen carousel Class maar met Ul en li */
+main section {
+	background-color: yellow;
+}
+/* iets met the nth of de etc. */
+main section {
+	background-color: burlywood;
+}
 
 
 #wat-wij-doen ul {
@@ -52,6 +50,18 @@ img {
 	flex-shrink: 0;
 	scroll-snap-align: center;
   }
+  /* dit gaat over Wat wij doen en daarin de carousel */
+/* .carousel {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  anchor-name: --carousel;
+
+  > .carousel__slide {
+    scroll-snap-align: center;
+  }
+} */
+/* geen carousel Class maar met Ul en li */
 }
 
 
