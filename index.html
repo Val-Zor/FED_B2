@@ -34,82 +34,81 @@
 
 
 	<main>
-		<section>
-      		<h1>Welkom welkom welkom bij Tuin Muisvrij</h1>
-			<img src="...." alt="......">
-      		<p>Met mijn helpers zorg ik ervoor dat de muis uit de tuin je huis in komt</p>
+		<section id="team">
+      		<h1>Welkom bij Tuin Muisvrij</h1>
+			<img src="images/Team.jpeg" alt="Team">
+      		<p>Met mijn helpers zorgen we ervoor dat de muis uit de tuin je huis in komt</p>
     	</section>
 
 		<section id="over-ons">
       		<h2>Over ons</h2>
-			
 			<!-- ik wil met een button (leer meer) op de li dat het kaartje omdraait en je meer te lezen krijgt  -->
       		<!-- en ik wil iets van een safe achtig icoontje er naast te doen -->
-			<ul>
-        		<li>
+				<ul>
+        			<li>
+						<details>
+  							<summary>
+							<!-- staat de samenvatting-->
+								<h3>Zorro</h3>
+              					<img src="images/Zorro.jpeg" alt="Zorro de Opperbaas">
+            					<p><strong>De Master</strong></p>
+  							</summary>
+								<p><strong>De Master</strong>
+									<br><br>
+								Zorro: de opperbaas en de efficiënte opvanger. Het grote voorbeeld en de zwarte panter die leefde voor de nacht en jacht. Hij pakte ze, liet ze niet meer los en at alles netjes schoon op. Geen documentaire van David Attenborough voor nodig, de actie op 30 cm van je af. En nu is de hemel zijn jachtplek.</p>
+					<!-- hier staat alles zoals de P hierbovenb-->
+					 <!-- tab en spatie voor het ontsluiten van de informatie -->
+						  			<button onclick="this.closest('details').removeAttribute('open')">Sluiten</button>
+						</details> 
+        			</li>
+				
+					<li>
           			<!-- <h3>Valina</h3>
               		<img src="Valina.jpeg" alt="Valina heeft een BO">
             		<p>Dienaar</p> -->
-					<details>
-  						<summary>
+						<details>
+  							<summary>
 							<!-- staat de samenvatting-->
-							<h3>Valina</h3>
-              				<img src="images/Valina.jpg" alt="Valina heeft een BO">
-            				<p>Dienaar</p>
-  						</summary>
-							<p>Van 6 uur tot ...ook weer 6. Ruimt de muisjes op, geeft ze voer, schept de poep op en blijft zo bezig. Ondanks alle intervisies en getoonde voorbeelden van de Master willen de kwartjes niet vallen.</p>
+								<h3>Valina</h3>
+              					<img src="images/Valina.jpg" alt="Valina heeft een BO">
+            					<p><strong>Dienaar</strong></p>
+  							</summary>
+								<p><strong>De Dienaar</strong>
+									<br><br>
+								Van 6 uur tot ...ook weer 6. Ruimt de muisjes op, geeft ze voer, schept de poep op en blijft zo bezig. Ondanks alle intervisies en getoonde voorbeelden van de Master willen de kwartjes niet vallen.</p>
 					<!-- hier staat alles zoals de P hierbovenb-->
 					 <!-- tab en spatie voor het ontsluiten van de informatie -->
-							<br>
-    						<button onclick="this.closest('details').removeAttribute('open')">Sluiten</button>
-
-					</details> 
-					
-        		</li>
+									  <button onclick="this.closest('details').removeAttribute('open')">Sluiten</button>
+						</details> 
+        			</li>
 				
-				<li>
-					<details>
-  						<summary>
-							<!-- staat de samenvatting-->
-							<h3>Zorro</h3>
-              				<img src="images/Zorro.jpeg" alt="Zorro de Opperbaas">
-            				<p>De Master</p>
-  						</summary>
-							<p>Zorro: de opperbaas en de efficiënte opvanger. Het grote voorbeeld en de zwarte panter die leefde voor de nacht en jacht. Hij pakte ze, liet ze niet meer los en at alles netjes schoon op. Geen documentaire van David Attenborough voor nodig, de actie op 30 cm van je af. En nu is de hemel zijn jachtplek.</p>
-					<!-- hier staat alles zoals de P hierbovenb-->
-					 <!-- tab en spatie voor het ontsluiten van de informatie -->
-								<br>
-    							<button onclick="this.closest('details').removeAttribute('open')">Sluiten</button>
-					</details> 
-					
-        		</li>
-
-				<li>
-          			<details>
-  						<summary>
-							<h3>Mickey</h3>
-              				<img src="images/Mickey.jpeg" alt="Mickey vindt er wat van">
-            				<p>De Hyperdepieper</p>
-        				</summary>
-							<p>Hyperdepieper en supergevoelig. Hij kijkt naar de muis en weet eigenlijk niet wat hij ermee moet doen. Inmiddels heeft hij het redelijk afgeleerd om iets mee te nemen, dus dat is makkelijk opruimen. Zijn focus is op zijn huisgenootje Meis. Met irritatie, verwondering en verwarring leeft hij samen met ons.</p>
-								<br>
-    							<button onclick="this.closest('details').removeAttribute('open')">Sluiten</button>
-					</details>
-				</li>
+		
+					<li>
+          				<details>
+  							<summary>
+								<h3>Mickey</h3>
+              					<img src="images/Mickey.jpeg" alt="Mickey vindt er wat van">
+            					<p>De Hyperdepieper</p>
+        					</summary>
+								<p><strong>De Hyperdepieper</strong>
+									<br><br> Mickey is supergevoelig en rent bij drukte als een kip zonder kop rond. Hij kijkt naar de muis en weet eigenlijk niet wat hij ermee moet doen. Inmiddels heeft hij het redelijk afgeleerd om iets mee te nemen, dus dat is makkelijk opruimen. Zijn focus is op zijn huisgenootje Meis. Met irritatie, verwondering en verwarring leeft hij samen met ons.</p>
+						  			<button onclick="this.closest('details').removeAttribute('open')">Sluiten</button>
+							</details>
+					</li>
 				
-				<li>
-          			<details>
-						<summary> 
-							<h3>Meis</h3>
-              				<img src="images/Meis.jpeg" alt="Meis op de ladder">
-            				<p>Andere planeet</p>
-						</summary>
-							<p>Meis eet alles wat vast en los zit. Ze brengt graag cadeautjes mee, maar laat ze vaak los en raakt ze soms ook kwijt. Zodat de bediende achter de muisjes aan mag gaan om ze weer vrij te laten. Een halfbakken jager, maar wel vol trots brengt ze haar buit onder het bed van haar bediende voor het makkelijke opruimen. Haar grootste succes: een dode rat onder het bed.</p>
-								<br>
-    							<button onclick="this.closest('details').removeAttribute('open')">Sluiten</button>
-					</details>
-        		</li>
-			</ul>
+					<li>
+          				<details>
+							<summary> 
+								<h3>Meis</h3>
+              					<img src="images/MeisP.jpeg" alt="Meis op de ladder">
+            					<p><strong>Andere planeet</strong></p>
+							</summary>
+								<p><strong>De Ander Planeter</strong>
+									<br><br> Meis eet alles wat vast en los zit. Ze brengt graag cadeautjes mee, maar laat ze vaak los en raakt ze soms ook kwijt. Zodat de bediende achter de muisjes aan mag gaan om ze weer vrij te laten. Een halfbakken jager, maar wel vol trots brengt ze haar buit onder het bed van haar bediende voor het makkelijke opruimen. Haar grootste succes: een dode rat onder het bed.</p>
+						  			<button onclick="this.closest('details').removeAttribute('open')">Sluiten</button>
+						</details>
+        			</li>
+				</ul>
 		</section>
 
 		<section id="wat-wij-doen">

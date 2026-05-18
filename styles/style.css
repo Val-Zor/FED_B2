@@ -58,6 +58,50 @@ header nav ul li:last-child {
 
 
 
+
+
+
+#team {
+  position: relative;
+  /* dit is de parent/ container. Daarom relatief*/
+}
+
+#team img {
+  width: 100%;
+  height: 30em;
+  object-fit: cover;
+}
+
+#team h1 {
+  position: absolute;
+  /* zet zich vast aan de parent die relatief is */
+  top: 7rem;
+  left: 3rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5em 1em;
+  z-index: 1;
+  /* afbeelding is 0-laag. h1 en p liggen erboven Hoe hoger hoe meer erboven*/
+}
+
+#team p {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5em 1em;
+  z-index: 1;
+}
+
+
+
+
+
+#over-ons {
+  background-color: yellow;
+}
+
 /* waarom lukt het niet naar mobiel dat ze allen onder elaar komen? */
 /* al zoy ik het het liefste willen dat ze inelkaar schuiven */
 /* foto's bewerk ik voordat ik ze plaats? Wat is een goed formaat? */
@@ -70,6 +114,18 @@ header nav ul li:last-child {
   gap: 2rem;
   max-width: 60rem;
   /* zodat er max 3 naaste lkaar omen. 4 is propperig */
+}
+
+#over-ons li:first-child {
+  flex: 1 1 100%;
+  /* start op volledige breedte → hele rij */
+  /*  flex-grow:1;
+      flex-shrink:1;
+      flex-basis:100% */
+}
+
+#over-ons li:not(:first-child) {
+  flex: 1 1 25%;
 }
 
 #over-ons img {
@@ -95,6 +151,8 @@ header nav ul li:last-child {
   position: absolute;
   width: 100%;
   height: 100%;
+  /* padding: 2em; */
+  /* ik wil dat de test op de achterkant niet tot de randen is */
   backface-visibility: hidden;
   transition: 0.7s ease;
   transform: rotateY(0deg);
@@ -132,7 +190,7 @@ header nav ul li:last-child {
   left: 0;
   backface-visibility: hidden;
   transform: rotateY(180deg);
-  transition: transform 0.6s ease;
+  transition: transform 1.3s ease;
 }
 
 #over-ons details[open] > button {
@@ -141,6 +199,7 @@ header nav ul li:last-child {
 
 @media (max-width:48em) {
   /* breakpunt tablet dus 2 naast elkaar */
+  /* en dan 2 aan 2 */
   #over-ons li {
     flex: 1 1 40%;
     /* px of en of rem?  */
@@ -150,14 +209,16 @@ header nav ul li:last-child {
 @media (max-width:30em) {
   #over-ons li {
     flex: 1 1 100%;
-    /* flex-direction: column; */
     /* px of en of rem?  */
   }
-
 }
 
 
 
+
+
+/* waarom valt wat wij doen buiten de kleuren? */
+/* hoe krijg ik meer ruimte tussen deze en de vorige sectie? */
 #wat-wij-doen ul {
 	display: flex;
 	overflow-x: auto;
