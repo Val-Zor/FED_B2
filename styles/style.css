@@ -58,7 +58,8 @@ header nav ul li:last-child {
 
 
 
-
+/* waarom lukt het niet naar mobiel dat ze allen onder elaar komen? */
+/* al zoy ik het het liefste willen dat ze inelkaar schuiven */
 /* foto's bewerk ik voordat ik ze plaats? Wat is een goed formaat? */
 #over-ons ul {
   display: flex;
@@ -214,7 +215,7 @@ header nav ul li:last-child {
   }
 
 }
-
+/* wil dat het bij mobiel zichtbaar is dat het er maar 3 zijn */
 
 
 footer {
