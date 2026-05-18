@@ -60,31 +60,96 @@ header nav ul li:last-child {
 
 
 /* foto's bewerk ik voordat ik ze plaats? Wat is een goed formaat? */
-#over-ons {
+#over-ons ul {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
   gap: 2rem;
+  max-width: 60rem;
+  /* zodat er max 3 naaste lkaar omen. 4 is propperig */
 }
 
 #over-ons img {
   width: 100%;
   /* totale breedte */
-  height: 200px;
+  height: 12em;
   /* px of % of ... */
   object-fit: cover;
   /* wil alle afbeeldingen even groot */
 }
 
 #over-ons li {
-  flex: 1
-  /* alle afbeeldingen even breed */
+  flex: 1 1 25%
+}
+
+#over-ons details {
+  position: relative;
+  perspective: 62.5em;
+  height: 18em;
+}
+
+#over-ons summary {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: 0.7s ease;
+  transform: rotateY(0deg);
+  /* afb en detials zichtbaar */
+  pointer-events: auto;
+  cursor: pointer;
+  list-style: none;
+}
+
+#over-ons details[open] summary {
+  transform: rotateY(-180deg);
+  pointer-events: none;
+}
+
+#over-ons details[open] > p {
+  transform: rotateY(0deg);
+}
+
+#over-ons details > p {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: transform 0.7s ease;
+  overflow-y: auto;
+  margin: 0;
+}
+
+#over-ons details > button {
+  /* opgegeven en code gecopy paste . Wist niet hoe het met CSS te doen*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: transform 0.6s ease;
+}
+
+#over-ons details[open] > button {
+  transform: rotateY(0deg);
+}
+
+@media (max-width:48em) {
+  /* breakpunt tablet dus 2 naast elkaar */
+  #over-ons li {
+    flex: 1 1 40%;
+    /* px of en of rem?  */
+  }
 }
 
 @media (max-width:30em) {
-  #over-ons ul{
-    flex-direction: column;
+  #over-ons li {
+    flex: 1 1 100%;
+    /* flex-direction: column; */
     /* px of en of rem?  */
   }
 
@@ -100,6 +165,8 @@ header nav ul li:last-child {
 	anchor-name: --carousel;
 	scroll-behavior: smooth;
   list-style: none;
+  background-color: black;
+  color: white;
   margin: 0;
   padding: 0;
 /* doe dit nu overal. Is dit wel slim? En kan dt niet handiger?  */
@@ -128,7 +195,6 @@ header nav ul li:last-child {
     position: fixed;
     position-anchor: --carousel;
     position-visibility: always;
-    font-family: "Material Symbols Outlined";
   }
 
   &::scroll-button(right) {
