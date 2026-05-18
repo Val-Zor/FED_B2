@@ -137,9 +137,6 @@ header nav ul li:last-child {
   /* wil alle afbeeldingen even groot */
 }
 
-#over-ons li {
-  flex: 1 1 25%
-}
 
 #over-ons details {
   position: relative;
@@ -216,6 +213,10 @@ header nav ul li:last-child {
 
 
 
+#wat-wij-doen{
+  background-color: black;
+  color: white;
+}
 
 /* waarom valt wat wij doen buiten de kleuren? */
 /* hoe krijg ik meer ruimte tussen deze en de vorige sectie? */
@@ -227,8 +228,8 @@ header nav ul li:last-child {
 	anchor-name: --carousel;
 	scroll-behavior: smooth;
   list-style: none;
-  background-color: black;
-  color: white;
+  /* background-color: black; */
+  /* color: white; */
   margin: 0;
   padding: 0;
 /* doe dit nu overal. Is dit wel slim? En kan dt niet handiger?  */
@@ -272,9 +273,8 @@ header nav ul li:last-child {
 
 @media (max-width: 30em) {
   #wat-wij-doen ul > li {
-    width 100%;
+    width: 100%;
   }
-
 }
 /* wil dat het bij mobiel zichtbaar is dat het er maar 3 zijn */
 
