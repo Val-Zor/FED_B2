@@ -7,8 +7,6 @@
 }
 
 
-
-
 img { 
 	max-width: 100%;
 /* wordt nooit groter dan de parent. Mickey zijn foto was giga */
@@ -37,6 +35,63 @@ main section {
 }
 
 
+
+
+
+/* ik snap maar niet hoe ik die nav horizontaal krijg. Flex doet niets. 
+en ik merk dat ik de paddings en em kwijt ben */
+
+/* list style heb de bullets weggehaald */
+header nav ul {
+  display: flex;
+  list-style: none; 
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* wilde deze rechts zetten. Gewoon voor het gewoon */
+header nav ul li:last-child {
+  margin-right: auto;
+}
+
+
+
+
+
+/* foto's bewerk ik voordat ik ze plaats? Wat is een goed formaat? */
+#over-ons {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+#over-ons img {
+  width: 100%;
+  /* totale breedte */
+  height: 200px;
+  /* px of % of ... */
+  object-fit: cover;
+  /* wil alle afbeeldingen even groot */
+}
+
+#over-ons li {
+  flex: 1
+  /* alle afbeeldingen even breed */
+}
+
+@media (max-width:30em) {
+  #over-ons ul{
+    flex-direction: column;
+    /* px of en of rem?  */
+  }
+
+}
+
+
+
 #wat-wij-doen ul {
 	display: flex;
 	overflow-x: auto;
@@ -44,7 +99,10 @@ main section {
 	scroll-snap-type: x mandatory;
 	anchor-name: --carousel;
 	scroll-behavior: smooth;
-
+  list-style: none;
+  margin: 0;
+  padding: 0;
+/* doe dit nu overal. Is dit wel slim? En kan dt niet handiger?  */
   > li {
     width: 80%;
 	flex-shrink: 0;
@@ -82,6 +140,51 @@ main section {
     position-area: inline-start center;
     content: 'arrow_back' / 'Previous';
   }
+}
+
+@media (max-width: 30em) {
+  #wat-wij-doen ul > li {
+    width 100%;
+  }
+
+}
+
+
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: greenyellow;
+  color: rosybrown;
+}
+
+footer > a {
+  align-self: flex-start;
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+  /* align-items: center; */
+  width: 100%;
+  justify-content: center;
+}
+
+
+footer ul img{
+  width: 2em;
+  height: 2em;
+}
+
+footer p {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7em;
 }
 
 
