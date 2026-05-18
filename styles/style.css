@@ -209,16 +209,19 @@ header nav ul li:last-child {
   /* en dan 2 aan 2 */
   #over-ons li {
     flex: 1 1 40%;
-    /* px of en of rem?  */
+    /* column-count: 2; */
+    /* column-gap: 2em; */
   }
 }
 
 @media (max-width:30em) {
   #over-ons li {
     flex: 1 1 100%;
-    /* px of en of rem?  */
+    /* column-count: 1; */
   }
 }
+
+
 
 
 
@@ -287,6 +290,11 @@ header nav ul li:last-child {
   }
 }
 /* wil dat het bij mobiel zichtbaar is dat het er maar 3 zijn */
+/* en wil bij laptop formaat de kolom breedte iets meer responsive is */
+
+
+
+
 
 
 footer {
