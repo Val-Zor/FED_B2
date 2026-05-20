@@ -9,6 +9,8 @@
 
 :root {
   interpolate-size: allow-keywords;
+  /* --color-roze: hsl(0, 100%, 88%); */
+
 }
 
 img { 
@@ -24,41 +26,46 @@ html {
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
+  min-width: 36em;
+  /* hier want in de body werkte die niet */
+
 }
 
 
 body {
-  min-width: 20em;
-  /* waarom wordt het kleiner dan een mobile scherm? */
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
 }
 
+p {
+  font-weight: 400;
+}
 
 header {
   position: sticky;
   height: 2em;
   top: 0;
   z-index: 10;
-  background-color: greenyellow;
-  color: red;
+  /* background-color: var(--color-roze); */
+  background-color: black;
+  color: whitesmoke;
 }
 
 
 
 main {
-	background-color: pink;
+	background-color: var(--color-roze);
   margin: 0 auto;
   max-width: 60rem;
 }
 
 main section {
-	background-color: yellow;
+	background-color:limegreen;
 }
 /* iets met the nth of de etc. */
 main section {
-	background-color: burlywood;
+	background-color: palegreen;
 }
 
 
@@ -127,7 +134,7 @@ header nav ul {
 
 
 #over-ons {
-  background-color: orange;
+  background-color: palegreen;
   max-width: 60rem;
 }
 
@@ -151,23 +158,14 @@ header nav ul {
   /* zodat er max 3 naaste lkaar omen. 4 is propperig */
 }
 
-/* #over-ons li {
-  /* flex-basis:100%; */
-/* } 
 
 
 @media (width > 36em) {
-  /* breakpunt tablet dus 2 naast elkaar */
-  /* en dan 2 aan 2 */
-  /* #over-ons li { */
-    /* flex-basis:calc(50% - 1rem); */
-    
-    /* column-count: 2; */
-    /* column-gap: 2em; */
-  /* } */
-#over-ons ul {
+  /* breakpunt tablet dus 2 naast elkaar */   
+  #over-ons ul {
     grid-template-columns: 1fr 1fr;
   }
+}
 
 @media (width > 48em) { 
   #over-ons ul {
@@ -179,9 +177,6 @@ header nav ul {
     grid-column-start:1;
     grid-column-end: -1;
   }
-  /* #over-ons li { */
-    /* flex-basis:calc( (100% - 4em) / 3  ); */
-  /* } */
 }
 
 
@@ -201,6 +196,9 @@ header nav ul {
 }
 
 
+#over-ons .card summary p {
+    font-weight: 400;
+}
 
 /* voorkant card */
 #over-ons summary {
@@ -227,7 +225,7 @@ header nav ul {
 }
 
 #over-ons .card summary p {
-  font-weight: 700;
+  font-weight: 400;
 }
 
 #over-ons .card summary img {
@@ -336,12 +334,22 @@ header nav ul {
 
   &::scroll-button(right) {
     position-area: inline-end center;
-    content: 'arrow_forward' / 'Next';
+    content: '🐹' / 'Next';
+    background-color: palegreen;
+    border: none;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
   }
 
   &::scroll-button(left) {
     position-area: inline-start center;
-    content: 'arrow_back' / 'Previous';
+    content: '🐾' / 'Previous';
+    background-color: palegreen;
+    border: none;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
   }
 }
 
@@ -354,7 +362,13 @@ header nav ul {
 /* en wil bij laptop formaat de kolom breedte iets meer responsive is */
 
 
-
+#wat-wij-doen ul {
+  > li {
+    width: 25em;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+  }
+}
 
 
 
@@ -362,8 +376,9 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: greenyellow;
-  color: rosybrown;
+  background-color: black;
+  color: whitesmoke;
+  margin: 0 auto;
   /* max-width: 60rem; */
 }
 
