@@ -7,6 +7,10 @@
 }
 
 
+:root {
+  interpolate-size: allow-keywords;
+}
+
 img { 
 	max-width: 100%;
 /* wordt nooit groter dan de parent. Mickey zijn foto was giga */
@@ -16,7 +20,7 @@ img {
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
-:root {
+html {
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
@@ -28,23 +32,25 @@ body {
   /* waarom wordt het kleiner dan een mobile scherm? */
   margin: 0;
   padding: 0;
-  /* font-family: sans-serif; */
+  font-family: 'Inter', sans-serif;
 }
 
 
 header {
   position: sticky;
+  height: 2em;
   top: 0;
   z-index: 10;
-  background-color: pink;
-  color: aquamarine;
+  background-color: greenyellow;
+  color: red;
 }
 
 
 
-
 main {
-	background-color: green;
+	background-color: pink;
+  margin: 0 auto;
+  max-width: 60rem;
 }
 
 main section {
@@ -69,11 +75,7 @@ header nav ul {
   gap: 2rem;
   margin: 0;
   padding: 0;
-}
-
-/* wilde deze rechts zetten. Gewoon voor het gewoon */
-header nav ul li:last-child {
-  margin-right: auto;
+  justify-content: center;
 }
 
 
@@ -85,6 +87,8 @@ header nav ul li:last-child {
 #team {
   position: relative;
   /* dit is de parent/ container. Daarom relatief*/
+  max-width: 100%;
+  overflow: hidden;
 }
 
 #team img {
@@ -119,118 +123,163 @@ header nav ul li:last-child {
 
 
 
+
+
+
 #over-ons {
-  background-color: yellow;
+  background-color: orange;
+  max-width: 60rem;
 }
+
+
+/*******************/
+/* MARK: CARD LIST */
+/*******************/
 
 /* waarom lukt het niet naar mobiel dat ze allen onder elaar komen? */
 /* al zoy ik het het liefste willen dat ze inelkaar schuiven */
 /* foto's bewerk ik voordat ik ze plaats? Wat is een goed formaat? */
 #over-ons ul {
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  display:grid;
   list-style: none;
   margin: 0;
   padding: 0;
   gap: 2rem;
-  max-width: 60rem;
+ 
   /* zodat er max 3 naaste lkaar omen. 4 is propperig */
 }
 
-#over-ons li:first-child {
-  flex: 1 1 100%;
-  /* start op volledige breedte → hele rij */
-  /*  flex-grow:1;
-      flex-shrink:1;
-      flex-basis:100% */
+/* #over-ons li {
+  /* flex-basis:100%; */
+/* } 
+
+
+@media (width > 36em) {
+  /* breakpunt tablet dus 2 naast elkaar */
+  /* en dan 2 aan 2 */
+  /* #over-ons li { */
+    /* flex-basis:calc(50% - 1rem); */
+    
+    /* column-count: 2; */
+    /* column-gap: 2em; */
+  /* } */
+#over-ons ul {
+    grid-template-columns: 1fr 1fr;
+  }
+
+@media (width > 48em) { 
+  #over-ons ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #over-ons li:first-child {
+    /* flex-basis:100%; */
+    grid-column-start:1;
+    grid-column-end: -1;
+  }
+  /* #over-ons li { */
+    /* flex-basis:calc( (100% - 4em) / 3  ); */
+  /* } */
 }
 
-#over-ons li:not(:first-child) {
-  flex: 1 1 25%;
-}
-
-#over-ons img {
-  width: 100%;
-  /* totale breedte */
-  height: 12em;
-  /* px of % of ... */
-  object-fit: cover;
-  /* wil alle afbeeldingen even groot */
-}
 
 
-#over-ons details {
+
+
+/**************/
+/* MARK: CARD */
+/**************/
+
+#over-ons .card {
   position: relative;
   perspective: 62.5em;
-  height: 18em;
+  transform-style:preserve-3d;
+  height: 23em;
+  display:grid;
 }
 
+
+
+/* voorkant card */
 #over-ons summary {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  grid-column-start: 1;
+  grid-row-start: 1;
+
+  /* position: absolute; */
+  /* width: 100%; */
+  /* height: 100%; */
   /* padding: 2em; */
   /* ik wil dat de test op de achterkant niet tot de randen is */
   backface-visibility: hidden;
-  transition: 0.7s ease;
-  transform: rotateY(0deg);
+  transition: 1.3s linear;
+  /* transform: rotateY(0deg); */
   /* afb en detials zichtbaar */
   pointer-events: auto;
   cursor: pointer;
   list-style: none;
 }
 
-#over-ons details[open] summary {
+#over-ons .card[open] summary {
   transform: rotateY(-180deg);
   pointer-events: none;
 }
 
-#over-ons details[open] > p {
+#over-ons .card summary p {
+  font-weight: 700;
+}
+
+#over-ons .card summary img {
+  width: 100%;
+  /* totale breedte */
+  height: 17em;
+  /* px of % of ... */
+  object-fit: cover;
+  /* wil alle afbeeldingen even groot */
+}
+
+
+/* achterkant card */
+
+.card::details-content {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+
+ /* transition: transform 1.3s ease; */
+
+  transition-property: content-visibility, transform;
+  transition-duration: 1.3s;
+  transition-timing-function:linear;
+
+  transition-behavior: allow-discrete;
+  overflow: hidden;
+}
+
+.card[open]::details-content {
   transform: rotateY(0deg);
 }
 
 #over-ons details > p {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
-  transition: transform 0.7s ease;
-  overflow-y: auto;
-  margin: 0;
+  max-width:25em;
+  margin: 2em;
 }
 
-#over-ons details > button {
-  /* opgegeven en code gecopy paste . Wist niet hoe het met CSS te doen*/
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
-  transition: transform 1.3s ease;
+#over-ons details > h4 {
+  margin: 1em;
 }
 
-#over-ons details[open] > button {
-  transform: rotateY(0deg);
-}
 
-@media (max-width:48em) {
-  /* breakpunt tablet dus 2 naast elkaar */
-  /* en dan 2 aan 2 */
-  #over-ons li {
-    flex: 1 1 40%;
-    /* column-count: 2; */
-    /* column-gap: 2em; */
-  }
-}
+/* #over-ons details > button {} */
 
-@media (max-width:30em) {
-  #over-ons li {
-    flex: 1 1 100%;
-    /* column-count: 1; */
-  }
-}
+/* #over-ons details[open] > button {} */
+
+
+
+
+
 
 
 
@@ -257,6 +306,7 @@ header nav ul li:last-child {
   margin: 0;
   padding: 0;
 /* doe dit nu overal. Is dit wel slim? En kan dt niet handiger?  */
+
   > li {
     width: 80%;
 	flex-shrink: 0;
@@ -314,6 +364,7 @@ footer {
   align-items: flex-start;
   background-color: greenyellow;
   color: rosybrown;
+  /* max-width: 60rem; */
 }
 
 footer > a {
