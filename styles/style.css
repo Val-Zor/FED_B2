@@ -136,6 +136,8 @@ header nav ul {
 #over-ons {
   background-color: palegreen;
   max-width: 60rem;
+  padding: 3rem 2rem;
+  /* boven en onder de 3 om ruimte te creeren en L en R een */
 }
 
 
@@ -154,10 +156,11 @@ header nav ul {
   margin: 0;
   padding: 0;
   gap: 2rem;
- 
-  /* zodat er max 3 naaste lkaar omen. 4 is propperig */
-}
+ }
 
+#over-ons li {
+  width: 100%;
+}
 
 
 @media (width > 36em) {
@@ -191,7 +194,7 @@ header nav ul {
   position: relative;
   perspective: 62.5em;
   transform-style:preserve-3d;
-  height: 23em;
+  height: 25em;
   display:grid;
 }
 
@@ -204,11 +207,14 @@ header nav ul {
 #over-ons summary {
   grid-column-start: 1;
   grid-row-start: 1;
+  background-color: #daf3d1;
+  /* voorkant kaartje */
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
 
   /* position: absolute; */
-  /* width: 100%; */
-  /* height: 100%; */
-  /* padding: 2em; */
   /* ik wil dat de test op de achterkant niet tot de randen is */
   backface-visibility: hidden;
   transition: 1.3s linear;
@@ -243,6 +249,10 @@ header nav ul {
 .card::details-content {
   grid-column-start: 1;
   grid-row-start: 1;
+  background-color: hsl(61, 100%, 91%);
+    /* achterkant kaartje */
+  border-radius: 1rem;
+  padding: 1rem;
   backface-visibility: hidden;
   transform: rotateY(180deg);
 
@@ -260,15 +270,46 @@ header nav ul {
   transform: rotateY(0deg);
 }
 
+#over-ons details {
+  position: relative;
+}
+
 #over-ons details > p {
   max-width:25em;
-  margin: 2em;
+  margin: 1rem;
 }
 
 #over-ons details > h4 {
-  margin: 1em;
+  margin: 1rem;
 }
 
+/* #over-ons details button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #111;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.12);
+  z-index: 1;
+} */
+
+#over-ons details button:hover {
+  background-color: #f1f1f1;
+}
+
+#over-ons details button:focus-visible {
+  outline: 2px solid #333;
+  outline-offset: 2px;
+}
 
 /* #over-ons details > button {} */
 
@@ -287,6 +328,8 @@ header nav ul {
 #wat-wij-doen{
   background-color: black;
   color: white;
+  padding: 2rem;
+  /* padding-inline: 1rem; */
 }
 
 /* waarom valt wat wij doen buiten de kleuren? */
@@ -303,6 +346,7 @@ header nav ul {
   /* color: white; */
   margin: 0;
   padding: 0;
+  /* padding-inline: 1rem; */
 /* doe dit nu overal. Is dit wel slim? En kan dt niet handiger?  */
 
   > li {
